@@ -1,0 +1,140 @@
+/* External CSS for Small Additions - Floating WhatsApp & Favicon */
+
+/* Cart Sidebar */
+#cart-sidebar {
+    position: fixed;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background: white;
+    z-index: 9999;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+    border-left: 3px solid #1B3022;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+#cart-sidebar.show {
+    transform: translateX(0);
+}
+
+/* Small Floating WhatsApp Button */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    border: 2px solid white;
+}
+
+.floating-whatsapp::before {
+    content: "📱" !important;
+}
+
+.floating-whatsapp:hover {
+    transform: scale(1.1);
+    background: #128C7E;
+}
+
+/* Phone numbers container - centered alignment */
+.contact-numbers {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 20px !important;
+    flex-wrap: wrap !important;
+}
+
+/* Phone numbers - ONLY change icon content, preserve all original styling */
+.contact-numbers .phone-number {
+    /* Original styling preserved from main CSS */
+    white-space: nowrap !important;
+}
+
+/* Hide old blue phone icon and add WhatsApp logo - NO styling changes */
+.contact-numbers .phone-number span {
+    display: none !important;
+}
+
+.contact-numbers .phone-number::before {
+    content: "📱" !important;
+    /* Use original text color from button */
+    color: inherit !important;
+}
+
+/* WhatsApp button - hide old message icon and add WhatsApp logo */
+.whatsapp-btn {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+.whatsapp-btn span {
+    display: none !important;
+}
+
+.whatsapp-btn::before {
+    content: "📱" !important;
+    font-size: 1.1rem !important;
+    color: white !important;
+}
+
+/* Floating WhatsApp button - hide old icon and add WhatsApp logo */
+.floating-whatsapp span {
+    display: none !important;
+}
+
+.floating-whatsapp::before {
+    content: "📱" !important;
+    font-size: 1.4rem !important;
+    color: white !important;
+}
+
+/* Mobile view - stack vertically and centered */
+@media (max-width: 768px) {
+    .contact-numbers {
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+}
+
+/* Header logo and title centering */
+.logo {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+}
+
+/* Image quality and grid display for hair products */
+.products .product img {
+    height: 200px !important;
+    object-fit: cover !important;
+    border-radius: 10px !important;
+}
+
+/* Enhanced section spacing after removing therapeutic category */
+.category-section {
+    margin-bottom: 60px !important;
+}
+.category-title {
+    flex-direction: row-reverse !important;
+    gap: 15px !important;
+}
+
+.category-title .icon {
+    margin: 0 !important;
+}
